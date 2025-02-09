@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "自定义滚动条样式",
+    "description": "扩展名称"
+  },
+  "extDesc": {
+    "message": "自定义网页滚动条样式，支持自定义宽度、颜色和动画效果",
+    "description": "扩展描述"
+  }
+}

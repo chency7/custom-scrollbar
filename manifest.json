@@ -1,11 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "自定义滚动条样式",
-  "name__MSG_locale__": "Custom Scrollbar Style",
+  "name": "__MSG_extName__",
   "version": "1.0.0",
-  "description": "自定义网页滚动条样式，支持自定义宽度、颜色和动画效果",
-  "description__MSG_locale__": "Customize webpage scrollbar style with custom width, colors and animation effects",
+  "description": "__MSG_extDesc__",
   "author": "Your Name",
+  "default_locale": "zh_CN",
   "permissions": ["storage", "activeTab"],
   "action": {
     "default_popup": "popup.html",

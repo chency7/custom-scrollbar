@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Custom Scrollbar Style",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Customize webpage scrollbar style with custom width, colors and animation effects",
+    "description": "Extension description"
+  }
+}

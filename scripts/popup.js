@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.getElementById("toggleSite");
   const optionsButton = document.getElementById("options");
+  const configButton = document.getElementById("configScrollbar");
 
   // 获取当前标签页信息
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -44,5 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // 打开选项页面
   optionsButton.addEventListener("click", function () {
     chrome.runtime.openOptionsPage();
+  });
+
+  // 打开配置页面
+  configButton.addEventListener("click", function () {
+    chrome.tabs.create({ url: "config.html" });
   });
 });

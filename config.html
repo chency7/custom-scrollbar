@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .config-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .preview-section {
+            height: 200px;
+            overflow-y: scroll;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .control-group {
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        input[type="color"] {
+            width: 50px;
+            height: 30px;
+            padding: 0;
+            border: none;
+        }
+
+        .color-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .preview-content {
+            height: 1000px;
+            padding: 20px;
+            background: linear-gradient(45deg, #f5f5f5, #ffffff);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>滚动条样式配置</h1>
+
+    <div class="config-section">
+        <h2>预览</h2>
+        <div class="preview-section" id="preview">
+            <div class="preview-content">
+                <h3>滚动条预览区域</h3>
+                <p>上下滚动来查看效果</p>
+                <!-- 添加更多内容使其可滚动 -->
+            </div>
+        </div>
+    </div>
+
+    <div class="config-section">
+        <h2>基本设置</h2>
+        <div class="control-group">
+            <label>滚动条宽度: <span id="widthValue">32</span>px</label>
+            <input type="range" id="scrollbarWidth" min="8" max="50" value="32">
+        </div>
+
+        <div class="control-group">
+            <label>圆角大小: <span id="radiusValue">16</span>px</label>
+            <input type="range" id="borderRadius" min="0" max="25" value="16">
+        </div>
+    </div>
+
+    <div class="config-section">
+        <h2>颜色设置</h2>
+        <div class="control-group">
+            <label>轨道颜色:</label>
+            <div class="color-input">
+                <input type="color" id="trackColor" value="#e0e0e0">
+                <span id="trackColorValue">#e0e0e0</span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>滑块渐变色起始:</label>
+            <div class="color-input">
+                <input type="color" id="thumbColorStart" value="#2196F3">
+                <span id="thumbColorStartValue">#2196F3</span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>滑块渐变色结束:</label>
+            <div class="color-input">
+                <input type="color" id="thumbColorEnd" value="#1976D2">
+                <span id="thumbColorEndValue">#1976D2</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="config-section">
+        <button id="saveConfig">保存配置</button>
+        <button id="resetConfig" style="background-color: #f44336;">重置默认</button>
+    </div>
+
+    <script src="scripts/config.js"></script>
+</body>
+
+</html>
